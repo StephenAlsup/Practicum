@@ -23,8 +23,6 @@
 }
 
 .logo {
-  display: flex;
-  justify-content: flex-start;
   width: 196px;
   height: 60px;
 }
@@ -51,14 +49,14 @@
   font-size: 66px;
   line-height: 76px;
   font-weight: 500;
-  margin-top: 150px;
+  margin: 150px 0 0;
 }
 
 .header__description {
   max-width: 532px;
   font-size: 20px;
   line-height: 30px;
-  margin-top: 32px;
+  margin: 32px 0 0;
 }
 
 .header__image {
@@ -99,6 +97,7 @@
   align-items: start;
   justify-content: space-between;
   box-sizing: border-box;
+  background-color: #f2f2f2;
 }
 
 .events__content {
@@ -187,31 +186,26 @@
 }
 
 .person_name_feynman {
-  display: flex;
   top: -30px;
   left: 319px;
 }
 
 .person_name_burbidge {
-  display: flex;
   top: 96px;
   right: 125px;
 }
 
 .person_name_cannon {
-  display: flex;
   bottom: 18px;
   right: 216px;
 }
 
 .person_name_mitchell {
-  display: flex;
   bottom: 82px;
   left: 142px;
 }
 
 .person_name_tarter {
-  display: flex;
   top: 79px;
   left: 159px;
 }
@@ -242,6 +236,10 @@
   background-image: url(../images/staff_picks_background.jpg);
   background-size: cover;
   background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .staff__title {
@@ -265,13 +263,15 @@
   max-width: 760px;
   align-items: center;
   display: flex;
-  margin: 68px auto;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 68px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 40px;
   list-style-type: none;
-  flex-direction: row;
+
+  position: relative;
 }
 .card {
   background-color: #fff;
@@ -385,15 +385,15 @@
 
 .about__paragraph {
   margin: 0 0 32px;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+
   z-index: 1;
   position: relative;
 }
+.about__paragraph:last-child {
+  margin-bottom: 0;
+}
 
 .about__circle {
-  display: flex;
   background-color: #2f80ed;
   width: 495px;
   height: 495px;
@@ -461,5 +461,5 @@
 }
 
 .footer__copyright {
-  margin-top: 108px;
+  margin: 108px 0 0;
 }
